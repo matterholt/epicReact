@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RawReact-Matterholt-> Ex.2</title>
+    <script src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <div id="extraCredit"></div>
+
+    <script type="module">
+        // get the root element for element to add to
+    const rootElem = document.getElementById("root")
+    // create the Raw React element to append to 
+    const elemType = 'h1'
+    const elemProp = {children:"Hello World", className:"container"}
+    const reactComp = React.createElement(elemType,elemProp)
+    console.log(reactComp)
+    // render time
+    ReactDOM.render(reactComp,rootElem)
+
+    // extra credit learning example only
+    const extraCreditRoot = document.getElementById("extraCredit")
+    const nestedElem = React.createElement("div",
+    {children:[
+        React.createElement('h2',null,"Hello"),
+        React.createElement('h3',null,"Nested"),
+        React.createElement('h4',null,"Element")
+    ],
+    className :"container"}
+    )
+    ReactDOM.render(nestedElem,extraCreditRoot)
+
+
+</script>
+
+</body>
