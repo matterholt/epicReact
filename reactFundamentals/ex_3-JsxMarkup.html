@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RawReact-Matterholt-> Ex.2</title>
+    <script src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
+    <!-- using babel to compile JSX -->
+    <script src="https://unpkg.com/@babel/standalone@7.9.3/babel.js"></script>
+
+</head>
+
+<body>
+    <div id="root"></div>
+
+
+    <script type="text/babel">
+        const rootElem = document.getElementById("root");
+
+        const jsElement = <h1 className="head_container"> Boom! Hello World using JSx </h1>;
+        ReactDOM.render(jsElement,rootElem)
+
+
+</script>
+
+</body>
