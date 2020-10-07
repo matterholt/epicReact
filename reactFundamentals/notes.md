@@ -1,7 +1,9 @@
 # Tid-bits of interest
 
-1.  Difference of the two types of programing
-    React abstract the Imperative browser API.
+## Vanilla JS
+
+Difference of the two types of programing
+React abstract the Imperative browser API.
 
     Definition:
     “You know, imperative programming is like how you do something, and declarative programming is more like what you do, or something.”
@@ -23,17 +25,19 @@
 
     [Imperative vs Declarative Programming](https://ui.dev/imperative-vs-declarative-programming/)
 
-2.  To work with Rect will need to load 2 script files. One responsible in creating the elements added to the DOM and the second is adding the elements to the DOM (append)
+## Writing Raw React Elements
 
-    - JSX is syntactic sugar for calling
+- To work with Rect will need to load 2 script files. One responsible in creating the elements added to the DOM and the second is adding the elements to the DOM (append)
 
-      ```js
-      React.createElement("tag", [prop], children);
-      ```
+  - JSX is syntactic sugar for calling
 
-    - unpkg -> access code on npm, and get it on the browser
+    ```js
+    React.createElement("tag", [prop], children);
+    ```
 
-      ```html
-      <script src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script>
-      <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
-      ```
+  - unpkg -> access code on npm, and get it on the browser
+
+    ```html
+    <script src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
+    ```
