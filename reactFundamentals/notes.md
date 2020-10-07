@@ -25,8 +25,6 @@
 
 2.  To work with Rect will need to load 2 script files. One responsible in creating the elements added to the DOM and the second is adding the elements to the DOM (append)
 
-    - React supports native and VR and web
-
     - JSX is syntactic sugar for calling
 
       ```js
