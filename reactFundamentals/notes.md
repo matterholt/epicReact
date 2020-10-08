@@ -98,3 +98,9 @@ React abstract the Imperative browser API.
 - with the curly brackets --> `{}` we can jump in and out of JS land when we are in JSX land. inside curly bracket most JS can be performed.
 
 - why we can do statement inside curly brackets, because will be added into the React.createElement as a argument
+
+- can not use statement in template literals
+
+- what the difference between statement(imperative logic) and an expression(evaluate to a value, turnery) in JS
+
+- able to spread props and redefine something like a className when props get past

@@ -18,9 +18,18 @@
 
     <script type="text/babel">
         const rootElem = document.getElementById("root");
+        const className = "head_container"
+        const lang = 'jsx'
+        const login = true
+        const user ="Sam"
 
-        const jsElement = <h1 className="head_container"> Boom! Hello World using JSx </h1>;
-        ReactDOM.render(jsElement,rootElem)
+        const JsElement = <h1 className={className}> Boom! Hello {login ? user : 'World'} using {lang.toUpperCase()} </h1>;
+
+        const props = {className, user}
+        const jsProps = <div id="special" {...props} className="containerDefault"> </div>
+        console.log(jsProps)
+
+        ReactDOM.render(JsElement,rootElem)
 
 
 </script>
