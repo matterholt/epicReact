@@ -161,3 +161,13 @@ React abstract the Imperative browser API.
     subject: PropTypes.string.isRequired,
   };
   ```
+
+- React.Fragment is used when you don't want to have a parent div.
+
+```html
+
+<React.Fragment> NO DIV PARENT</React.Fragment>
+
+<> syntax sugar for above example NO DIV PARENT</>
+
+```
