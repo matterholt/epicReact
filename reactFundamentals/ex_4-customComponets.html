@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RawReact-Matterholt-> Ex.2</title>
+    <script src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
+    <!-- using babel to compile JSX -->
+    <script src="https://unpkg.com/@babel/standalone@7.9.3/babel.js"></script>
+
+</head>
+
+<body>
+    <div id="root"></div>
+
+
+    <script type="text/babel">
+    const rootElem  = document.getElementById("root")
+
+        function Card ({children}){
+            return(
+                <div className="card">{children}</div>
+            )
+        }
+
+    const elementContainer = (
+        <div className="container">
+        {React.createElement(Card,{children:"one way to do this, function,createElement"})}
+        {Card({children:"another is calling the function directly, but generates no component"})}
+        <Card>If the function name in angle brackets and it is start with a capital then babel will process it like JSX</Card>
+        </div>
+    )
+
+           ReactDOM.render(elementContainer,rootElem)
+
+
+</script>
+
+</body>

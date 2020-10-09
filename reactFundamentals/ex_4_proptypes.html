@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RawReact-Matterholt-> Ex.2</title>
+    <script src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
+
+    <!-- using babel to compile JSX -->
+    <script src="https://unpkg.com/@babel/standalone@7.9.3/babel.js"></script>
+
+</head>
+
+<body>
+    <div id="root"></div>
+
+
+    <script type="text/babel">
+    const rootElem  = document.getElementById("root")
+
+
+// creating our own prop type validator
+    const customPropTypes = {
+
+        string(props,propName,ComponentName){
+            //  console.log({props,propName,ComponentName})
+             const type = typeof props[propName]
+             if (type !== 'string'){
+                 return new Error(`prop-type is incorrect received ${type} for the ${propName}, requires sting `)
+             }
+        }
+    }
+    
+    function Card({title,subject}){
+        return(
+            <div className="card">
+                <h2>{title}</h2>
+                <p>{subject}</p>
+            </div>
+        )
+    }
+    Card.propTypes={
+        // title :customPropTypes.string,
+        // subject :customPropTypes.string,
+        title : PropTypes.string.isRequired,
+        subject : PropTypes.string.isRequired,
+    }
+
+// code will process without a error.
+    const elementContainer=(
+    <div className="container">
+            <Card title={5} subject="testing"/>
+            <Card title='why have props-type' />
+    </div>
+    )
+
+
+    ReactDOM.render(elementContainer,rootElem)
+
+
+</script>
+
+</body>
