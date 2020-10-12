@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RawReact-Matterholt-> Ex.5</title>
+    <script src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
+    <!-- using babel to compile JSX -->
+    <script src="https://unpkg.com/@babel/standalone@7.9.3/babel.js"></script>
+    <style>
+        .circle {
+            box-shadow: 4px 7px 9px gray;
+            display:grid;
+            place-items:center;
+            border-radius: 100%;
+            margin: 50px;
+            font-weight: 500;
+        }
+        .circle--small{
+            width:150px;
+            height:150px;
+        }
+         .circle--med{
+            width:250px;
+            height:250px;
+        }
+         .circle--large{
+            width:350px;
+            height:350px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+    const root = document.getElementById("root")
+
+const Circle =({className='',style,size, ...otherProps})=>{
+const classSize = size ? `circle--${size}` : '';
+    return(
+        <div className={`circle ${className} ${classSize}`} style={{ fontSize:' 1.2rem', color:"white", ...style}} {...otherProps}/>
+    )
+}
+    const  LargeCircle = ()=>{
+        return(
+            <Circle className="circle--large" 
+            id="LgCircle"
+            style={{backgroundColor: "#329996"}}>
+                <p> Large circle </p>
+         </Circle>
+        )
+    }
+
+    const  MediumCircle = ()=>{
+        return(
+            <Circle className="circle--med" 
+            style={{backgroundColor: "#37324A"}}>
+                <p> Medium circle </p>
+         </Circle>
+        )
+    }
+    const  SmallCircle = ()=>{
+        // most of style is in the parent. box size define shape of box and have option to over write.
+        return(
+            <Circle size="small" style={{backgroundColor: "#933C60"}}>
+                <p> small circle </p>
+         </Circle>
+        )
+    }
+
+    function App (){
+        return(
+      <div>
+        <SmallCircle/>
+        <MediumCircle/>
+        <LargeCircle/>
+        </div>
+        )
+    }
+
+
+
+
+const elemContainer =(
+    <div>
+       <App/>
+        </div>
+)
+
+    ReactDOM.render(elemContainer,root)
+    </script>
+
+</body>
