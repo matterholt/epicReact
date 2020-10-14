@@ -62,3 +62,5 @@ function handleSubmit(e) {
   ```
 
 - controlled inputs, adding a value to the input allows React to control the value in the input. Should have a onChange handler to let React control the value and ensure that they values match.
+
+- If there is a need to have a default value in an input then a `defaultValue ="_______"` can be provided
