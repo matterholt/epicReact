@@ -93,6 +93,10 @@ React abstract the Imperative browser API.
   };
 ````
 
+## Other Facts in using JSX
+
+other items and comments that i found interesting.
+
 - "Interpolation" is defined as "the insertion of something of a different nature into something else.", template literals in JS
 
 - with the curly brackets --> `{}` we can jump in and out of JS land when we are in JSX land. inside curly bracket most JS can be performed.
@@ -103,7 +107,7 @@ React abstract the Imperative browser API.
 
 - what the difference between statement(imperative logic) and an expression(evaluate to a value, turnery) in JS
 
-- able to spread props and redefine something like a className when props get past
+- able to spread props and redefine something like a className when props get past.
 
 ## Creating Custom components
 
