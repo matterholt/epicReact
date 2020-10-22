@@ -5,7 +5,7 @@ published: true
 slug: Thinking about how we can extract logic out of the rendering and opening up the possibility to use it other places.
 ---
 
-### Process to make custom hooks
+## Process to make custom hooks
 
 How can we make the hook able to work with multiple values and keys, with save to local storage and things. The example is working with local storage. Working with local storage is could be pretty help full in other places.
 
