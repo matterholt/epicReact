@@ -2,7 +2,7 @@
 title: Intro to useEffect Hook
 date: 2020-10-15
 published: true
-slug:
+slug: checking out useEffect and extracting logic out in to a custom hook
 ---
 
 ## useEffect
@@ -79,3 +79,13 @@ Extracting a function that could be useful other places it can be defined as a c
 
 - what make it a custom hook is that it uses other hook inside the function.
 - The 'use' suffix allow some eslint rule to build on
+
+### Making Hook flexible
+
+Other coding that are captured during this session
+
+- Passing functional options, The way that was shown is deconstruct an object with defaults. So with as with saving data to local storage set a serialize and deserialize option.
+
+- Use case 1, If the state is computationally expensive to make. Then the there is an option to make a default value optionally a function. Don't want to compute it every re-render -- Not completely grasp concept.
+
+- Use case 2, If want to change the local storage key. we would want to track what the previous key and compare it to the the incoming key. Then if they don't equal each other then can be updated. Using useRef to keep track of the storage key. useRef will return an object that can be mutated without triggering a re-render of component.
