@@ -97,3 +97,9 @@ const [state, setState] ={
 - The "hack" to get it to work is to add a turnery to the status, getting the correct component to get rendered. But will still spend a render
 
 - Library provides a few options one of which is `js resetErrorBoundary `. but this only umount the errorBoundary component. but to make most user friendly would require a reset handler, and would need to have a onReset prop. Now would not require a key prop.
+
+## Extra Credit 8 -> Reset key props
+
+- Removing the error handling out to the component. removes some functionality of the app ( can't click on pokemon name and have it updated)
+
+- errorBoundary component accepts a reset key. This prop will re-render the errorBoundary's children again when the key provided changes with the updated state.
