@@ -82,8 +82,18 @@ const [state, setState] ={
 
 - There needs to be away to get the error boundary component to reset it's self. The work around is to add a unique key that can be controlled by useState. This would re-render the component with the initial state.
 
-## Extra Credit 6 ->
+## Extra Credit 6 -> Error Boundary Library
 
-- library that takes care of all the errors. called react-error-boundary. and there
+[react-error-boundary library](https://www.npmjs.com/package/react-error-boundary)
+
+- No need to write classes when there is library that takes care of all the errors. called react-error-boundary. and there
 
 - since it is an outside lib then requires to have the correct prop name to get passed into the 'outside' component
+
+## Extra Credit 7 -> Remounting of comp
+
+- The Error boundary component is getting unmounted when the key change therefore the children are getting unmounted. So it is work through the component and have the defaults displayed
+
+- The "hack" to get it to work is to add a turnery to the status, getting the correct component to get rendered. But will still spend a render
+
+- Library provides a few options one of which is `js resetErrorBoundary `. but this only umount the errorBoundary component. but to make most user friendly would require a reset handler, and would need to have a onReset prop. Now would not require a key prop.
