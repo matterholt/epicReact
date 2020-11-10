@@ -68,9 +68,7 @@ const [state, setState] ={
 
 ## Extra Credit 4 ->Error boundaries
 
-### React Docs
-
-- It would be better to show the error then have the white screen, Errors shouldn't break the whole website, React 16 introduces a new concept of an “error boundary”.
+- It would be better to show the error then have the white screen, Errors shouldn't break the whole website, React 16 introduces a new concept of an “error boundary”. Manage all errors in component tree.
 
 - ErrorBoundary, is a special component, and is needed to be written in class form, will return children and be a wrapper.
 
@@ -79,3 +77,13 @@ const [state, setState] ={
 - Error boundaries are react components and can catch JS errors any where in their child component tree, log those errors and displace the fallback UI
 
 - Error boundaries do not catch errors but help display errors to the user, so the is not a chance for a white screen.
+
+- Putting the error boundary around the part that would make the best place to help show what the error is. Don't want to wrap the whole thing since it would re-render everything.
+
+- There needs to be away to get the error boundary component to reset it's self. The work around is to add a unique key that can be controlled by useState. This would re-render the component with the initial state.
+
+## Extra Credit 6 ->
+
+- library that takes care of all the errors. called react-error-boundary. and there
+
+- since it is an outside lib then requires to have the correct prop name to get passed into the 'outside' component
