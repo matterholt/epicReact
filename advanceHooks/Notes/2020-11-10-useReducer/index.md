@@ -16,6 +16,7 @@ Notes are built around Kent C. Dodd's Epic React workshops
 
 - Typically would use the useReducer hook with a object of state.
 
+- If comparing the useReducer to useState. useState return state and a function to update state directly. where as useReducer provides a dispatch function which delegates the actual state update logic to the reducer.
 
 ```js
 
@@ -33,15 +34,32 @@ function Counter (step=1, initState = 0){
 
 - Most common but not always the best way to accomplish the task at hand.
 
+- useReducer is a hook that takes the function and the initial state as an argument. what ever is return from the the reducer would be new state.
+
+- 
+ 
+- !!! Not to use useReducer. when handling simple state and there is one state that is being manage. such as setting the what color preference the user prefer
+
+- Kent C Dodds says
+  - "When it's just an independent element of state you're managing: useState"
+
+  - When one element of your state relies on the value of another element of your state in order to update: useReducer
+
+    [Should I useState or useReducer?](https://kentcdodds.com/blog/should-i-usestate-or-usereducer)
+
+- To have an idea of when to use a useReducer would be an undo feature. where there is multiple states that need to be handled. current, past and next all have to be updated when the component get updated.
+
 - Traditionally would past the reducer function an action object. In the object would have a type of action a string describing what would be done to the initial state.
 
 - The state of the values are all ready been initialized with in the useReducer function and in scope of the reducer function. Then be past in as an argument.
 
 - The dispatch from the useReducer hook returns a function to which we will pass an object argument. The object will have the type of action to perform and any props needed to modify the state
 
-- easily add more cases pertaining to the state to which it is modifying. 
+- easily add more cases pertaining to the state to which it is modifying.
 
 - Good practice to throw an new Error to inform developers
+
+
 
 ```js
 
